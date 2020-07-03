@@ -21,6 +21,9 @@ ORDER BY
 result
 ```
 
+![tableau](https://github.com/fogloria/dataVisualization/blob/master/imgs/Dashboard%202.png?raw=true)
+interactive:https://public.tableau.com/profile/chilin#!/vizhome/Q1_15935103209000/Dashboard2
+
 Q2:Which hour(PST) should you ask a question so you can get the answer fast?
 ```
 with inst_hour as
@@ -45,6 +48,7 @@ ORDER BY question_hour
 Q3:Global user location(top 1,000 per reputation)
 Here:https://www.kaggle.com/joesserandom/top-1-000-reputation-geographical-distribution
 
+![distribution](https://github.com/fogloria/dataVisualization/blob/master/imgs/map.png)
 Q4:Which language is most populer?(has most related questions in different year) (heatmap)
 ```
 SELECT EXTRACT(YEAR from creation_date) AS year,count(tags) as tags_num
@@ -52,4 +56,5 @@ FROM `bigquery-public-data.stackoverflow.posts_questions`
 WHERE tags LIKE 'swift'
 GROUP BY year 
 ```
+![heatmap](https://github.com/fogloria/dataVisualization/blob/master/imgs/heatmap.png)
 
